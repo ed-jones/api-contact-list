@@ -2,7 +2,7 @@ import "./App.css";
 import { useFetchData } from "./useFetchData";
 
 function App() {
-  const { loading, data, error } = useFetchData(
+  const { loading, data, error } = useFetchData<RandomUser>(
     "https://randomuser.me/api/?nat=AU&results=20"
   );
 

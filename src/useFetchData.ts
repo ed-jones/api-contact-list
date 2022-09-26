@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-export const useFetchData = (input: RequestInfo | URL, init?: RequestInit) => {
-    const [data, setData] = useState<Array<RandomUser>>([]);
+export const useFetchData = <T,>(input: RequestInfo | URL, init?: RequestInit) => {
+    const [data, setData] = useState<Array<T>>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<boolean>(false);
 
